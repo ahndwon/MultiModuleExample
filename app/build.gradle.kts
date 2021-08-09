@@ -19,6 +19,7 @@ android {
 dependencies {
     implementation(Libraries.Koin)
     implementation(project(Modules.Home))
+    implementation(project(Modules.Launch))
 //
 //    implementation(project(Modules.ActivityFeature))
 //    implementation(project(Modules.FragmentFeature))

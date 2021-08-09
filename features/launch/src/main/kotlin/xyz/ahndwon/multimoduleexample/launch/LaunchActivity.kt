@@ -1,21 +1,21 @@
-package xyz.ahndwon.multimoduleexample.home
+package xyz.ahndwon.multimoduleexample.launch
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import xyz.ahndwon.multimoduleexample.home.model.MainViewModel
+import xyz.ahndwon.multimoduleexample.launch.model.LaunchViewModel
 
-class MainActivity : AppCompatActivity() {
+class LaunchActivity : AppCompatActivity() {
 
-    private val viewModel by viewModel<MainViewModel>()
+    private val viewModel by viewModel<LaunchViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_launch)
         bindViewModel()
-        if (savedInstanceState == null) showFragment(MainFragment.newInstance())
+        if (savedInstanceState == null) showFragment(LaunchFragment.newInstance())
     }
 
     private fun bindViewModel() = viewModel.run {

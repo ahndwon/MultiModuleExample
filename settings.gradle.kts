@@ -3,6 +3,7 @@ listOf(
 
     ":features:home",
     ":features:launch",
+    ":features:detail",
 //    ":features:activity_feature",
 //    ":features:fragment_feature",
 //

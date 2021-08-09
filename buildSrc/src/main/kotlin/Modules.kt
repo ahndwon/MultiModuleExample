@@ -4,6 +4,7 @@
 object Modules {
     const val Home = ":features:home"
     const val Launch = ":features:launch"
+    const val Detail = ":features:detail"
 
     //
 //    const val ActivityFeature = ":features:activity_feature"

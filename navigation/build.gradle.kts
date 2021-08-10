@@ -22,4 +22,6 @@ dependencies {
     implementation(Libraries.AndroidX.constraintLayout)
     implementation(Libraries.Koin)
     implementation(Libraries.Hilt)
+    implementation(Libraries.Navigation.FragmentKtx)
+    implementation(Libraries.Navigation.Ui)
 }

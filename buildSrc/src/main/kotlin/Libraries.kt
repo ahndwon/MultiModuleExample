@@ -3,6 +3,7 @@
  */
 object Libraries {
     const val hiltVersion = "2.38.1"
+    const val navigationVersion = "2.3.5"
 
     object AndroidX {
         const val activityKtx = "androidx.activity:activity-ktx:1.1.0"
@@ -42,6 +43,17 @@ object Libraries {
         override val name: String = "hilt-android-gradle-plugin"
 
         object Test : LibraryGroupChild(group = Koin, name = "koin-test"), TestImplementable
+    }
+
+    object Navigation :
+        LibraryGroup(groupName = "androidx.navigation", version = navigationVersion), Implementable,
+        Library {
+        override val name: String = ""
+
+        object FragmentKtx :
+            LibraryGroupChild(group = Navigation, name = "navigation-fragment-ktx"), Implementable
+
+        object Ui : LibraryGroupChild(group = Navigation, name = "navigation-ui-ktx"), Implementable
     }
 
     const val inline_activity_result = "com.github.florent37:inline-activity-result-kotlin:1.0.4"

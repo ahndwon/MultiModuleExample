@@ -6,11 +6,10 @@ object Modules {
     const val Launch = ":features:launch"
     const val Detail = ":features:detail"
 
-    //
 //    const val ActivityFeature = ":features:activity_feature"
 //    const val FragmentFeature = ":features:fragment_feature"
-//
-//    const val Navigation = ":navigation"
+
+    const val Navigation = ":navigation"
     const val Design = ":design"
     const val Core = ":core"
 }

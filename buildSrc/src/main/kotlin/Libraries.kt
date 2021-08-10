@@ -2,6 +2,7 @@
  * Lists all the external libraries used by the project.
  */
 object Libraries {
+    const val hiltVersion = "2.38.1"
 
     object AndroidX {
         const val activityKtx = "androidx.activity:activity-ktx:1.1.0"
@@ -25,8 +26,20 @@ object Libraries {
             Implementable
     }
 
-    object Koin : LibraryGroup(groupName = "io.insert-koin", version = "3.1.2"), Implementable, Library {
+    object Koin : LibraryGroup(groupName = "io.insert-koin", version = "3.1.2"), Implementable,
+        Library {
         override val name: String = "koin-android"
+
+        object Test : LibraryGroupChild(group = Koin, name = "koin-test"), TestImplementable
+    }
+
+    object JavaX : LibraryGroup(groupName = "javax.inject", version = "1") {
+        object Inject : LibraryGroupChild(group = JavaX, name = "javax.inject"), Implementable
+    }
+
+    object Hilt : LibraryGroup(groupName = "com.google", version = hiltVersion), Implementable,
+        Library {
+        override val name: String = "hilt-android-gradle-plugin"
 
         object Test : LibraryGroupChild(group = Koin, name = "koin-test"), TestImplementable
     }

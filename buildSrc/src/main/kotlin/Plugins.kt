@@ -32,3 +32,15 @@ fun PluginDependenciesSpec.kotlinAndroid(): PluginDependencySpec =
  */
 fun PluginDependenciesSpec.kotlinAndroidExt(): PluginDependencySpec =
     kotlin("android.extensions")
+
+/**
+ * Plugin that contains kapt
+ */
+fun PluginDependenciesSpec.kapt(): PluginDependencySpec =
+    kotlin("kapt")
+
+/**
+ * Plugin that contains Hilt for DI
+ */
+fun PluginDependenciesSpec.hilt(): PluginDependencySpec =
+    id("dagger.hilt.android.plugin")

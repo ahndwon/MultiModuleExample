@@ -7,7 +7,7 @@ listOf(
 //    ":features:activity_feature",
 //    ":features:fragment_feature",
 //
-//    ":navigation",
+    ":navigation",
     ":design",
     ":core"
 ).forEach {

@@ -18,6 +18,8 @@ android {
 
 dependencies {
     implementation(Libraries.Koin)
+    implementation(Libraries.Hilt)
+
     implementation(project(Modules.Home))
     implementation(project(Modules.Launch))
     implementation(project(Modules.Detail))
@@ -25,8 +27,7 @@ dependencies {
 //    implementation(project(Modules.ActivityFeature))
 //    implementation(project(Modules.FragmentFeature))
 //
-//    implementation(project(Modules.Navigation))
-//
+    implementation(project(Modules.Navigation))
     implementation(project(Modules.Design))
     implementation(project(Modules.Core))
 }

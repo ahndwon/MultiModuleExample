@@ -20,4 +20,5 @@ dependencies {
     implementation(Libraries.AndroidX.appcompat)
     implementation(Libraries.AndroidX.constraintLayout)
     implementation(Libraries.Koin)
+    implementation(Libraries.Hilt)
 }

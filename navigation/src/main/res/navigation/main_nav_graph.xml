@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/base_flow"
-    android:id="@+id/main_nav_graph">
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/base_flow">
 
     <include app:graph="@navigation/base_flow" />
 
@@ -13,16 +13,16 @@
     <action
         android:id="@+id/action_global_home_flow"
         app:destination="@id/home_flow"
-        app:popUpTo="@id/main_nav_graph"
         app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim" />
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/main_nav_graph" />
 
     <action
-        app:popUpTo="@id/main_nav_graph"
         android:id="@+id/action_global_dashboard_flow"
         app:destination="@id/dashboard_flow"
         app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim">
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/main_nav_graph">
 
         <argument
             android:name="msg"

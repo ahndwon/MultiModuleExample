@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="xyz.ahndwon.multimoduleexample.launch">
+    package="xyz.ahndwon.multimoduleexample.detail">
 
     <application>
-        <activity android:name="xyz.ahndwon.multimoduleexample.detail.DetailActivity"></activity>
+        <activity android:name="xyz.ahndwon.multimoduleexample.detail.DetailActivity" />
     </application>
 
 </manifest>

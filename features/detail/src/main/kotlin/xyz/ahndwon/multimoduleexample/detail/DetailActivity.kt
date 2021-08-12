@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import xyz.ahndwon.multimoduleexample.detail.model.LaunchViewModel
-import xyz.ahndwon.multimoduleexample.launch.R
 
 class DetailActivity : AppCompatActivity() {
 

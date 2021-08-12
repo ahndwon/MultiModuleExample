@@ -2,6 +2,7 @@
  * Lists all the external libraries used by the project.
  */
 object Libraries {
+    const val daggerVersion = "2.38.1"
     const val hiltVersion = "2.38.1"
     const val navigationVersion = "2.3.5"
 
@@ -38,11 +39,27 @@ object Libraries {
         object Inject : LibraryGroupChild(group = JavaX, name = "javax.inject"), Implementable
     }
 
-    object Hilt : LibraryGroup(groupName = "com.google", version = hiltVersion), Implementable,
+    object Dagger : LibraryGroup(groupName = "com.google.dagger", version = daggerVersion),
+        Implementable,
         Library {
-        override val name: String = "hilt-android-gradle-plugin"
+        override val name: String = "dagger"
 
-        object Test : LibraryGroupChild(group = Koin, name = "koin-test"), TestImplementable
+        object Compiler : LibraryGroupChild(group = Dagger, name = "dagger-compiler"), Kapt
+
+        object Android : LibraryGroupChild(group = Dagger, name = "dagger-android"), Implementable
+        object AndroidSupport : LibraryGroupChild(group = Dagger, name = "dagger-android-support"),
+            Implementable
+
+        object Processor : LibraryGroupChild(group = Dagger, name = "dagger-android-processor"),
+            Kapt
+    }
+
+    object Hilt : LibraryGroup(groupName = "com.google.dagger", version = hiltVersion),
+        Implementable,
+        Library {
+        override val name: String = "hilt-android"
+
+        object Compiler : LibraryGroupChild(group = Hilt, name = "hilt-android-compiler"), Kapt
     }
 
     object Navigation :

@@ -1,10 +1,13 @@
 plugins {
     androidApp()
     kotlinAndroid()
+    hilt()
+    kapt()
 }
 
 android {
     setAppConfig()
+    setPackagingOptions()
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -18,7 +21,15 @@ android {
 
 dependencies {
     implementation(Libraries.Koin)
+
+    implementation(Libraries.Dagger)
+    implementation(Libraries.Dagger.Compiler)
+    implementation(Libraries.Dagger.Android)
+    implementation(Libraries.Dagger.AndroidSupport)
+    implementation(Libraries.Dagger.Processor)
+
     implementation(Libraries.Hilt)
+    implementation(Libraries.Hilt.Compiler)
 
     implementation(project(Modules.Home))
     implementation(project(Modules.Launch))

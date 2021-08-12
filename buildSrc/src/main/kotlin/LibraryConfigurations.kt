@@ -23,3 +23,8 @@ interface TestImplementable : ConfigurableDependency
  * Dependencies should implement [Implementable] when they can be used with any configurations.
  */
 interface Implementable : ConfigurableDependency, TestImplementable, AndroidTestImplementable
+
+/**
+ * Dependencies should implement [Kapt] when they can be used with any configurations.
+ */
+interface Kapt : Implementable

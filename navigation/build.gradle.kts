@@ -2,10 +2,13 @@ plugins {
     androidLibrary()
     kotlinAndroid()
     kotlinAndroidExt()
+    kotlinSafeArgs()
+    kapt()
 }
 
 android {
     setLibraryConfig()
+    setPackagingOptions()
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
@@ -21,7 +24,13 @@ dependencies {
     implementation(Libraries.AndroidX.appcompat)
     implementation(Libraries.AndroidX.constraintLayout)
     implementation(Libraries.Koin)
+    implementation(Libraries.Dagger)
+    implementation(Libraries.Dagger.Compiler)
+    implementation(Libraries.Dagger.Android)
+    implementation(Libraries.Dagger.AndroidSupport)
+    implementation(Libraries.Dagger.Processor)
     implementation(Libraries.Hilt)
+    implementation(Libraries.Hilt.Compiler)
     implementation(Libraries.Navigation.FragmentKtx)
     implementation(Libraries.Navigation.Ui)
 }

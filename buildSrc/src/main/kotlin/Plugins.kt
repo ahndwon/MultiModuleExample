@@ -27,11 +27,18 @@ fun PluginDependenciesSpec.androidLibrary(): PluginDependencySpec =
 fun PluginDependenciesSpec.kotlinAndroid(): PluginDependencySpec =
     kotlin("android")
 
+// Deprecated
 /**
  * Plugin that contains useful Kotlin extensions for Android Development
  */
 fun PluginDependenciesSpec.kotlinAndroidExt(): PluginDependencySpec =
     kotlin("android.extensions")
+
+/**
+ * Plugin that contains useful Kotlin extensions for Android Development
+ */
+fun PluginDependenciesSpec.kotlinParcelize(): PluginDependencySpec =
+    kotlin("kotlin-parcelize")
 
 /**
  * Plugin that contains kapt
@@ -44,3 +51,10 @@ fun PluginDependenciesSpec.kapt(): PluginDependencySpec =
  */
 fun PluginDependenciesSpec.hilt(): PluginDependencySpec =
     id("dagger.hilt.android.plugin")
+
+/**
+ * Plugin that contains Safe Args for AndroidX Navigation
+ */
+fun PluginDependenciesSpec.kotlinSafeArgs(): PluginDependencySpec =
+    id("androidx.navigation.safeargs.kotlin")
+

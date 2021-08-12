@@ -1,6 +1,5 @@
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
-import org.gradle.api.JavaVersion
 
 /**
  * Sets the android{} configuration for the "app" module.
@@ -34,3 +33,19 @@ fun BaseExtension.setLibraryConfig() {
         getByName("main").java.srcDirs("src/main/kotlin")
     }
 }
+
+fun BaseExtension.setPackagingOptions() {
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LICENSE.txt")
+        exclude("META-INF/license.txt")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/NOTICE.txt")
+        exclude("META-INF/notice.txt")
+        exclude("META-INF/ASL2.0")
+        exclude("META-INF/*.kotlin_module")
+        exclude("META-INF/gradle/incremental.annotation.processors")
+    }
+}
+
